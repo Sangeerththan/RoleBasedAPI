@@ -1,18 +1,7 @@
-package com.server.roleBasedAPI.domain;
+package com.server.roleBasedAPI.repository;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import javax.persistence.*;
-
-@Entity
-public class User {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    @Column
+public class UserDTO {
     private String username;
-    @Column
-    @JsonIgnore
     private String password;
 
     public String getUsername() {
@@ -30,6 +19,4 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-
-
 }

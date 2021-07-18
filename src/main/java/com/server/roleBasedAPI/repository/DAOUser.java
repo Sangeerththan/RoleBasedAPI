@@ -1,10 +1,12 @@
-package com.server.roleBasedAPI.domain;
+package com.server.roleBasedAPI.repository;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
-public class User {
+@Table(name = "user")
+public class DAOUser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,6 +32,5 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-
 
 }
